@@ -192,6 +192,7 @@ var Scoreboard = React.createClass({
   getDefaultProps: function() {
     return {
       title: "scoreboard",
+      initialPlayers: INITIAL_STATE,
     }
   },
   getInitialState: function () {
