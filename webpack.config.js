@@ -1,10 +1,13 @@
 const path = require( 'path' )
+// const ASSET_PATH = process.env.ASSET_PATH || './public';ç
 
 module.exports = {
-  entry: './app.js',
+  devtool: 'inline-sourcemap',
+  context: path.resolve( __dirname + '/src' ),
+  entry: './index.js',
 
   output: {
-    path: path.resolve( __dirname, 'build'),
+    path: path.resolve( __dirname, 'build' ),
     filename: 'bundle.js'
   },
 
@@ -24,17 +27,3 @@ module.exports = {
 
   }
 }
-//  OLD SYNTAX
-  // loaders: [
-  //
-  //   {
-  //     test: /\.js$/,
-  //     exclude: /node_modules/,
-  //     loader: 'babel-loader'
-  //   },
-  //   {
-  //     test: /\.css$/,
-  //     // loader: 'style-loader!css-loader'
-  //     loader: ['style-loader', 'css-loader']
-  //   }
-  // ]
