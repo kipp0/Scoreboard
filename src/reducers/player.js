@@ -31,9 +31,9 @@ const initialState = {
 export default function Player(state=initialState, action) {
 
   let date = new Date()
-  let day = date.getDate()
-  let month = date.getMonth() + 1
-  let year = date.getFullYear()
+  // let day = date.getDate()
+  // let month = date.getMonth() + 1
+  // let year = date.getFullYear()
   let full_date = date.toLocaleDateString('en-US')
 
   switch (action.type) {
